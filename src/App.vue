@@ -1,28 +1,34 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+    <div id="app" class="col-12">
+        <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+            <header class="masthead mb-auto">
+                <div class="inner">
+                    <h3 class="masthead-brand">The Cave</h3>
+                    <nav class="nav nav-masthead justify-content-center">
+                        <router-link :to="{ name: 'Home' }" class="nav-link">Home</router-link>
+                        <router-link :to="{ name: 'About' }" class="nav-link">About</router-link>
+                        <router-link :to="{ name: 'Route' }" class="nav-link">Route</router-link>
+                    </nav>
+                </div>
+            </header>
+
+            <router-view></router-view>
+
+            <footer class="mastfoot mt-auto">
+                <div class="inner">
+                    <p>The Cave (c) 2019</p>
+                </div>
+            </footer>
+        </div>
+    </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'app',
-  components: {
-    HelloWorld
-  }
-}
+    export default {
+        name: 'app'
+    }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
