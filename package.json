@@ -11,6 +11,7 @@
     "bootstrap": "^4.2.1",
     "nprogress": "^0.2.0",
     "vue": "^2.5.17",
+    "vue-awesome": "^3.2.0",
     "vue-router": "^3.0.2"
   },
   "devDependencies": {

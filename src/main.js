@@ -3,12 +3,17 @@ import App from './App.vue'
 import VueRouter from 'vue-router'
 import NProgress from 'nprogress'
 
+import 'vue-awesome/icons'
+import Icon from 'vue-awesome/components/Icon'
+
 import Home from './components/Home.vue'
 import About from './components/About.vue'
+import Menu from './components/Menu.vue'
 import Route from './components/Route.vue'
 
 Vue.config.productionTip = false;
 Vue.use(VueRouter);
+Vue.component('v-icon', Icon);
 
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import '../node_modules/nprogress/nprogress.css'
@@ -24,6 +29,11 @@ const routes = [
     name: 'About',
     path: '/about',
     component: About
+  },
+  {
+    name: 'Menu',
+    path: '/menu',
+    component: Menu
   },
   {
     name: 'Route',
