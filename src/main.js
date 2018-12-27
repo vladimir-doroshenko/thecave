@@ -3,7 +3,10 @@ import App from './App.vue'
 import VueRouter from 'vue-router'
 import NProgress from 'nprogress'
 
-import 'vue-awesome/icons'
+import 'vue-awesome/icons/map-marker-alt'
+import 'vue-awesome/icons/phone'
+import 'vue-awesome/icons/brands/facebook'
+import 'vue-awesome/icons/brands/youtube'
 import Icon from 'vue-awesome/components/Icon'
 
 import Home from './components/Home.vue'
@@ -58,5 +61,6 @@ router.afterEach((to, from) => {
 
 new Vue({
   render: h => h(App),
+  mounted: () => document.dispatchEvent(new Event("x-app-rendered")),
   router
 }).$mount('#app');
